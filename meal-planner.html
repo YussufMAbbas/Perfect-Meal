@@ -7,6 +7,7 @@
     <title>بيرفيكت ميل - خطط وجباتك</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="meal-planner.css">
+    <link rel="shortcut icon" href="images/logo-no-text.png" type="image/x-icon">
 </head>
 
 <body>
@@ -27,26 +28,79 @@
             <div class="block">
                 <div>
                     <h3>اسمك ايه؟</h3>
-                    <input type="text" name="name" id="name" placeholder="اكتب اسمك">
+                    <input type="text" name="name" id="name" placeholder="اكتب اسمك...">
                 </div>
 
                 <div>
                     <h3>حدد ميزانيتك</h3>
                     <p class="subtitle">اختار الميزانية بتاعتك عشان نعمل لك خطة تناسبك</p>
+
                     <label class="radio-wrapper">
                         <input type="radio" name="budget" id="economic" class="radio">
                         <h4>ميزانية محدودة</h4>
                         <p class="subtitle">وجباتك هتكون غير مكلفة بحيث تتناسب مع ميزانيتك</p>
                     </label>
+
                     <label class="radio-wrapper">
                         <input type="radio" name="budget" id="high" class="radio">
                         <h4>ميزانية عالية</h4>
                         <p class="subtitle">هتمشي على خطة أعلى من الخطة الموفرة</p>
                     </label>
+
+                </div>
+                <input type="submit" id="continue" value="استمر">
+            </div>
+
+
+            <div class="block">
+                <div>
+                    <h3>العمر</h3>
+                    <p class="subtitle">الموقع بيستخدم عمرك عشان يحسب السعرات الحرارية اللي جسمك بيحتاجها يوميًّا</p>
+                    <input type="text" name="age" id="age" placeholder="اكتب عمرك...">
                 </div>
 
                 <div>
-                    <h3></h3>
+                    <h3>الوزن</h3>
+                    <input type="text" name="weight" id="weight" placeholder="اكتب وزنك بالكيلوجرام...">
+                </div>
+                
+                <div>
+                    <h3>الطول</h3>
+                    <input type="text" name="height" id="height" placeholder="اكتب طولك بالسنتيمتر...">
+                </div>
+                
+                <div>
+                    <h3>مستوى النشاط</h3>
+                    <p class="subtitle">مدى نشاطك على مدار الأسبوع</p>
+                    <label class="radio-wrapper">
+                        <input type="radio" name="activity" id="very-low" class="radio">
+                        <h4>نشاط قليل جدًّا (عمل مكتبي)</h4>
+                        <p class="subtitle">نشاطك قليل جدًّا خلال الأسبوع</p>
+                    </label>
+
+                    <label class="radio-wrapper">
+                        <input type="radio" name="activity" id="light" class="radio">
+                        <h4>نشاط بسيط</h4>
+                        <p class="subtitle">تمرين بسيط 1-3 أيام خلال الأسبوع</p>
+                    </label>
+
+                    <label class="radio-wrapper">
+                        <input type="radio" name="activity" id="moderate" class="radio">
+                        <h4>نشاط متوسط</h4>
+                        <p class="subtitle">تمرين متوسط 3-5 أيام خلال الأسبوع</p>
+                    </label>
+
+                    <label class="radio-wrapper">
+                        <input type="radio" name="activity" id="high" class="radio">
+                        <h4>نشاط عالي</h4>
+                        <p class="subtitle">تمرين قوي 6-7 أيام خلال الأسبوع</p>
+                    </label>
+
+                    <label class="radio-wrapper">
+                        <input type="radio" name="activity" id="very-high" class="radio">
+                        <h4>نشاط عالي جدًّا</h4>
+                        <p class="subtitle">تمرين مكثف جدًّا، عمل بدني شاق ، أو تمرين مرتين في اليوم</p>
+                    </label>
                 </div>
             </div>
             </div>

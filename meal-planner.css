@@ -1,5 +1,5 @@
 label:not(.radio-wrapper),
-input:not(.radio) {
+input[type="text"] {
     display: block;
 }
 
@@ -37,7 +37,7 @@ form {
     padding: 0 100px;
 }
 
-input:not(.radio) {
+input[type="text"] {
     margin: 0 30px;
     width: 100%;
     height: 40px;
