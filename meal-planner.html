@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بيرفيكت ميل - اصنع خطتك</title>
+    <title>بيرفيكت ميل - خطط وجباتك</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="meal-planner.css">
 </head>
+
 <body>
     <nav>
         <div class="navbar-logo">
@@ -20,9 +22,36 @@
         </div>
     </nav>
     <main>
+        <h1>خطط وجباتك</h1>
         <form action="">
-            <input type="text" placeholder="اكتب اسمك">
+            <div class="block">
+                <div>
+                    <h3>اسمك ايه؟</h3>
+                    <input type="text" name="name" id="name" placeholder="اكتب اسمك">
+                </div>
+
+                <div>
+                    <h3>حدد ميزانيتك</h3>
+                    <p class="subtitle">اختار الميزانية بتاعتك عشان نعمل لك خطة تناسبك</p>
+                    <label class="radio-wrapper">
+                        <input type="radio" name="budget" id="economic" class="radio">
+                        <h4>ميزانية محدودة</h4>
+                        <p class="subtitle">وجباتك هتكون غير مكلفة بحيث تتناسب مع ميزانيتك</p>
+                    </label>
+                    <label class="radio-wrapper">
+                        <input type="radio" name="budget" id="high" class="radio">
+                        <h4>ميزانية عالية</h4>
+                        <p class="subtitle">هتمشي على خطة أعلى من الخطة الموفرة</p>
+                    </label>
+                </div>
+
+                <div>
+                    <h3></h3>
+                </div>
+            </div>
+            </div>
         </form>
     </main>
 </body>
+
 </html>
