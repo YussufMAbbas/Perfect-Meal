@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بيرفيكت ميل - حاسبة السعرات</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo-no-text.png" type="image/x-icon">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
         </div>
     </nav>
     <main>
-        <h1>حاسبة السعرات</h1>
+        <h1 class="title">حاسبة السعرات</h1>
         <form action="">
             <div class="block">
                 <div>
@@ -86,18 +87,39 @@
                 </div>
             </div>
             <div class="center">
-                <input type="submit" id="submit" value="ارسال">
+                <input type="submit" id="submit" value="احسب">
             </div>
         </form>
-        
-        
-    </div>
-    <div class="center">
-    <div id="result-wrapper">
-        <h3 id="result"></h3>
-    </div>
+
+
+        </div>
+        <div class="hidden" id="results">
+            <h1 class="title">النتيجة</h1>
+            <div class="block tight" id="result-wrapper">
+                <h3>استهلاك سعراتك اليومي:</h3>
+                <h2 id="calories" class="tighter">2000 كالوري</h2>
+
+            </div>
+            <div class="macro">
+                <ul>
+                    <li>
+                        <h3 id="carbs">الكاربوهيدرات:</h3>
+                    </li>
+                    <li>
+                        <h3 id="protein">البروتين:</h3>
+                    </li>
+                    <li>
+                        <h3 id="fats">الدهون الصحية:</h3>
+                    </li>
+                </ul>
+
+            </div>
+            <br><br>
+        </div>
+
+
     </main>
-    <script src="script.js"></script>
+    <script src="tdee-calc.js"></script>
 </body>
 
 </html>

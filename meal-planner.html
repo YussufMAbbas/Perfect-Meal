@@ -21,9 +21,12 @@
         <div class="navbar-link">
             <a href="#about">فريقنا</a>
         </div>
+        <div class="navbar-link">
+            <a href="tdee-calc.html">حاسبة السعرات</a>
+        </div>
     </nav>
     <main>
-        <h1>خطط وجباتك</h1>
+        <h1 class="title">خطط وجباتك</h1>
         <form action="">
             <div class="block">
                 <div>
@@ -32,7 +35,7 @@
                 </div>
 
                 <div>
-                    <h3>حدد ميزانيتك</h3>
+                    <h3 id="budget-radio-label">حدد ميزانيتك</h3>
                     <p class="subtitle">اختار الميزانية بتاعتك عشان نعمل لك خطة تناسبك</p>
 
                     <label class="radio-wrapper">
@@ -42,17 +45,31 @@
                     </label>
 
                     <label class="radio-wrapper">
-                        <input type="radio" name="budget" id="high" class="radio">
+                        <input type="radio" name="budget" id="expensive" class="radio">
                         <h4>ميزانية عالية</h4>
                         <p class="subtitle">هتمشي على خطة أعلى من الخطة الموفرة</p>
                     </label>
 
                 </div>
-                <input type="submit" id="continue" value="استمر">
+                <div class="center">
+                    <input type="submit" id="proceed" value="استمر">
+                </div>
             </div>
 
 
-            <div class="block">
+            <div class="block hidden" id="tdee-form">
+                <div>
+                    <h3 id="gender-radio-label">النوع</h3>
+                    <label class="radio-wrapper">
+                        <input type="radio" name="gender" id="male" class="radio activity">
+                        <h4>ذكر</h4>
+                    </label>
+
+                    <label class="radio-wrapper">
+                        <input type="radio" name="gender" id="female" class="radio activity">
+                        <h4>أنثى</h4>
+                    </label>
+                </div>
                 <div>
                     <h3>العمر</h3>
                     <p class="subtitle">الموقع بيستخدم عمرك عشان يحسب السعرات الحرارية اللي جسمك بيحتاجها يوميًّا</p>
@@ -63,14 +80,14 @@
                     <h3>الوزن</h3>
                     <input type="text" name="weight" id="weight" placeholder="اكتب وزنك بالكيلوجرام...">
                 </div>
-                
+
                 <div>
                     <h3>الطول</h3>
                     <input type="text" name="height" id="height" placeholder="اكتب طولك بالسنتيمتر...">
                 </div>
-                
+
                 <div>
-                    <h3>مستوى النشاط</h3>
+                    <h3 id="activity-radio-label">مستوى النشاط</h3>
                     <p class="subtitle">مدى نشاطك على مدار الأسبوع</p>
                     <label class="radio-wrapper">
                         <input type="radio" name="activity" id="very-low" class="radio">
@@ -102,10 +119,34 @@
                         <p class="subtitle">تمرين مكثف جدًّا، عمل بدني شاق ، أو تمرين مرتين في اليوم</p>
                     </label>
                 </div>
+
+                <div>
+                    <h3 id="goal-radio-label">هدف الخطة</h3>
+                    <p class="subtitle">النتيجة المطلوبة من خطة الوجبات</p>
+                    <label class="radio-wrapper">
+                        <input type="radio" name="goal" id="lose" class="radio">
+                        <h4>خسارة وزن</h4>
+                        <p class="subtitle">هتمشي على نظام عجز سعرات</p>
+                    </label>
+                    <label class="radio-wrapper">
+                        <input type="radio" name="goal" id="maintain" class="radio">
+                        <h4>ثبات</h4>
+                        <p class="subtitle">هتمشي بالظبط على سعرات ثباتك</p>
+                    </label>
+                    <label class="radio-wrapper">
+                        <input type="radio" name="goal" id="gain" class="radio">
+                        <h4>اكتساب وزن</h4>
+                        <p class="subtitle">هتمشي على نظام فائض سعرات</p>
+                    </label>
+                </div>
+                <div class="center">
+                    <input type="submit" class="wide" id="submit" value="اصنع خطتك الآن!">
+                </div>
             </div>
             </div>
         </form>
     </main>
+    <script src="meal-planner.js"></script>
 </body>
 
 </html>

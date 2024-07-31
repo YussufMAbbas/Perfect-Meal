@@ -33,8 +33,13 @@ input[type="text"] {
     margin: 0;
 }
 
-form {
+form,
+.tight {
     padding: 0 100px;
+}
+
+.tighter {
+    padding: 30px;
 }
 
 input[type="text"] {
@@ -68,6 +73,10 @@ input[type="submit"] {
     margin-bottom: 50px;
 }
 
+input[type="submit"].wide {
+    width: 300px;
+}
+
 .center {
     display: flex;
     align-items: center;
@@ -79,8 +88,20 @@ input[type="submit"] {
 }
 
 #result-wrapper {
-    margin: 20px 30px;
-    width: 100%;
+    margin: 20px 0;
+    width: 800px;
+}
+
+.macro { 
+    margin: auto !important;
     border: 1px solid #398157;
     border-radius: 10px;
+    width: 600px;
+    margin-bottom: 20px;
+}
+li::marker {
+    color: #398157;
+}
+#tdee-form {
+    scroll-margin-top: 100px;
 }
