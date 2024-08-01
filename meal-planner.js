@@ -18,26 +18,9 @@ const heightInput = document.getElementById("height");
 
 const activityRadioLabel = document.getElementById("activity-radio-label");
 const activityRadioButtons = document.getElementsByName("activity");
+
 let activityFactorValue;
-const calcActivityFactor = (activityLevel) => {
-    switch (activityLevel) {
-        case "very-low":
-            activityFactorValue = 1.2;
-            break;
-        case "light":
-            activityFactorValue = 1.375;
-            break
-        case "moderate":
-            activityFactorValue = 1.55;
-            break
-        case "high":
-            activityFactorValue = 1.725;
-            break
-        case "very-high":
-            activityFactorValue = 1.9;
-            break
-    }
-}
+
 const goalRadioLabel = document.getElementById("goal-radio-label")
 const goalRadioButtons = document.getElementsByName("goal")
 
@@ -280,6 +263,22 @@ submitButton.addEventListener("click", (event) => {
             activityRadioLabel.nextElementSibling.remove();
         }
         activityRadioValid = true;
+        switch (checkedActivityRadio) {
+            case "very-low":
+                activityFactorValue = 1.2;
+                break;
+            case "light":
+                activityFactorValue = 1.375;
+                break
+            case "moderate":
+                activityFactorValue = 1.55;
+                break
+            case "high":
+                activityFactorValue = 1.725;
+                break
+            case "very-high":
+                activityFactorValue = 1.9;
+                break
     }
 
     let checkedGoalRadio;
@@ -320,6 +319,11 @@ submitButton.addEventListener("click", (event) => {
         } else {
             tDEE = ((447.593 + (9.247 * Number(weightInput.value)) + (3.098 * Number(heightInput.value)) - (4.330 * Number(ageInput.value))) * Number(activityFactor)).toFixed(1)
         }
+        if (checkedGoalRadio === "lose") {
+            tDEE -= 500
+        } else if (checkedGoalRadio === "gain") {
+            tDEE += 500
+        }
 
         const carbs = ((tDEE * 0.5) / 4).toFixed(1)
         const protein = ((tDEE * 0.3) / 4).toFixed(1)
@@ -339,6 +343,6 @@ submitButton.addEventListener("click", (event) => {
         localStorage.setItem('protein', protein);
         localStorage.setItem('fats', fats);
 
-        // window.location.href = 'nextpage.html';
+        window.location.href = 'meal.html';
     }
-})
+}})

@@ -1,14 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بيرفيكت ميل - خطة الوجبات</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="meal-planner.css">
     <link rel="shortcut icon" href="images/logo-no-text.png" type="image/x-icon">
 </head>
-<body>
-    
+
+<body class="with-sidebar">
+    <nav>
+        <div class="navbar-logo">
+            <img src="images/logo-no-text.png" alt="Perfect Meal Logo">
+        </div>
+        <div class="navbar-link">
+            <a href="index.html">الصفحة الرئيسية</a>
+        </div>
+        <div class="navbar-link">
+            <a href="#about">فريقنا</a>
+        </div>
+        <div class="navbar-link">
+            <a href="tdee-calc.html">حاسبة السعرات</a>
+        </div>
+    </nav>
+    <main>
+        <div id="expensive" class="meal-plan">
+            <h1 class="title">خطة الوجبات</h1>
+            <div class="meal">
+                <img src="images/foul medames.jpg" alt="صورة فطار">
+                <div class="vl"></div>
+                <h2 class="title">الفطار</h2>
+                <ul>
+                    <li>فول مدمس (<span class="amount">150</span> جرام)</li>
+                    <li>بيض مسلوق كامل (<span class="amount">150</span> جرام)</li>
+                    <li>توست أسمر (<span class="amount">100</span> جرام)</li>
+                </ul>
+            </div>
+            <div class="meal">
+                <img src="images/expensive lunch.webp" alt="صورة غداء">
+                <div class="vl"></div>
+                <h2 class="title">الغداء</h2>
+                <ul>
+                    <li>لحم ماعز (مطبوخ / مشوي / في الفرن) (<span class="amount">200</span> جرام)</li>
+                    <li>حمص مسلوق (<span class="amount">50</span> جرام)</li>
+                    <li>رز مصري أبيض (<span class="amount">125</span> جرام)</li>
+                </ul>
+            </div>
+            <div class="meal">
+                <img src="images/dinner.jpg" alt="صورة عشاء">
+                <div class="vl"></div>
+                <h2 class="title">العشاء</h2>
+                <ul>
+                    <li>جبنة قريش (<span class="amount">220</span> جرام)</li>
+                    <li>سلطة (<span class="amount">50</span> جرام)</li>
+                    <li>توست أسمر (<span class="amount">30</span> جرام)</li>
+                </ul>
+            </div>
+            <div class="meal">
+                <img src="images/snacks.png" alt="صورة سناكس">
+                <div class="vl"></div>
+                <h2 class="title">سناكس</h2>
+                <ul>
+                    <li>زبادي لايت (<span class="amount">105</span> جرام)</li>
+                    <li>موز (<span class="amount">100</span> جرام)</li>
+                    <li>كاجو جامبو (<span class="amount">10</span> جرام)</li>
+                </ul>
+            </div>
+        </div>
+        <div id="economic" class="meal-plan hidden">
+            <h1 class="title">خطة الوجبات</h1>
+            <div class="meal">
+                <img src="images/foul medames.jpg" alt="صورة فطار">
+                <div class="vl"></div>
+                <h2 class="title">الفطار</h2>
+                <ul>
+                    <li>فول مدمس (<span class="amount">150</span> جرام)</li>
+                    <li>بيض مسلوق كامل (<span class="amount">176</span> جرام)</li>
+                    <li>سلطة (<span class="amount">100</span> جرام)</li>
+                    <li>عيش بلدي مصري (<span class="amount">90</span> جرام)</li>
+                </ul>
+            </div>
+            <div class="meal">
+                <img src="images/lunch.jpg" alt="صورة غداء">
+                <div class="vl"></div>
+                <h2 class="title">الغداء</h2>
+                <ul>
+                    <li>صدور فراخ مشوية قطع (<span class="amount">200</span> جرام)</li>
+                    <li>حمص مسلوق (<span class="amount">50</span> جرام)</li>
+                    <li>رز مصري أبيض (<span class="amount">125</span> جرام)</li>
+                </ul>
+            </div>
+            <div class="meal">
+                <img src="images/dinner.jpg" alt="صورة عشاء">
+                <div class="vl"></div>
+                <h2 class="title">العشاء</h2>
+                <ul>
+                    <li>جبنة قريش (<span class="amount">220</span> جرام)</li>
+                    <li>سلطة (<span class="amount">100</span> جرام)</li>
+                    <li>توست أسمر (<span class="amount">30</span> جرام)</li>
+                </ul>
+            </div>
+            <div class="meal">
+                <img src="images/snacks.png" alt="صورة سناكس">
+                <div class="vl"></div>
+                <h2 class="title">سناكس</h2>
+                <ul>
+                    <li>زبادي لايت (<span class="amount">105</span> جرام)</li>
+                    <li>موز (<span class="amount">100</span> جرام)</li>
+                    <li>فول سوداني (<span class="amount">18</span> جرام)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <aside id="user-profile" class="block">
+        <div>
+            <h3 id="name">يوسف محمد</h3>
+            <ul>
+                <li>
+                    <p><strong>الميزانية:</strong> <span id="budget">محدودة</span></p>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <p><strong>النوع:</strong> <span id="gender">ذكر</span></p>
+                </li>
+                <li>
+
+                    <p><strong>العمر:</strong> <span id="age">14</span> سنة</p>
+                </li>
+                <li>
+                    <p><strong>الوزن:</strong> <span id="weight">70</span> كجم</p>
+                </li>
+                <li>
+                    <p><strong>الطول:</strong> <span id="height">180</span> سم</p>
+                </li>
+                <li>
+                    <p><strong>مستوى النشاط:</strong> <span id="activity">متوسط</span></p>
+                </li>
+                <li>
+                    <p><strong>استهلاك سعراتك اليومي:</strong> <span id="tdee">2000</span> سعرة</p>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <p class="multiline"><strong>إجمالي سعرات اليوم:</strong></p><span
+                        id="meal-total-calories">2000</span> سعرة (<span id="goal">خسارة وزن</span>)
+                </li>
+                <li>
+                    <p><strong>إجمالي الكاربوهيدرات:</strong> <span id="carbs">250</span> جم</p>
+                </li>
+                <li>
+                    <p><strong>إجمالي البروتين:</strong> <span id="protein">150</span> جم</p>
+                </li>
+                <li>
+                    <p><strong>إجمالي الدهون الصحية:</strong> <span id="fats">44.4</span> جم</p>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="meal.js"></script>
 </body>
+
 </html>
